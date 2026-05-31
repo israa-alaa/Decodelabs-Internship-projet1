@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #04050c, #1a123a, #04050c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Jacques Francois", serif;
+    color: white;
+}
+
+/* الحاوية الكلية الثابتة 1200px المطلوبة في الـ PDF لتوسيط المحتوى */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* تنسيق الهيدر وتوزيع العناصر أفقياً بارتفاع 80px */
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3b344c;
+
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #53448c;
+        color: #53448c;
+    transition: ease-out 0.3s;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-signup-container {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: white;
+}
+
+.login-btn:hover {
+    border-bottom: 2px solid #53448c;
+    transition: ease-out 0.3s;
+}
+
+.signup-btn {
+    background-color: #080808;
+    color: white;
+    border: 1px solid #53448c;
+}
+
+.signup-btn:hover {
+    background-color: #53448c;
+    transition: ease-in 0.3s;
+}
+
+.learn-more-btn {
+    margin-top: 15px;
+}
+
+.learn-more-btn:hover {
+    background-color: transparent;
+    border: 1px solid #53448c;
+    color: white;
+    transition: ease-in 0.3s;
+}
+
+/* تنسيق قسم الهيرو المفرود  */
+.hero-container {
+    padding: 120px 0;
+    /* الحشو المطلوب رأسيّاً */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    /* مسافة الصف المحددة */
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* شبكة الكروت (تطبيق الـ Grid على الحاوية الكبرى وليس الكارت الفردي) */
+.hont-cooles {
+    display: grid;
+    /* التوزيع الذكي للكروت الثلاثة بمقاس يتراوح بين 278px و 288px */
+    grid-template-columns: repeat(auto-fit, minmax(278px, 288px));
+    gap: 24px;
+    /* الـ Gutter الإلزامي */
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+/* تنسيق الكارت الفردي وحوافه الدائرية */
+.card {
+    border: 1px solid #3b344c;
+    background-color: #120e26;
+    border-radius: 20px;
+    overflow: hidden;
+    /* عشان الصورة متطلعش بره الحواف الدائرية */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: #53448c;
+    transform: translateY(-10px);
+    transition: ease-out 0.3s;
+
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+}
+
+.text-container {
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #3b3266, #262b53);
+    color: white;
+    flex-grow: 1;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* الفوتر بارتفاع 400px الثابت ولونه الداكن */
+footer {
+    height: 400px;
+    background-color: #0b0f19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #3b344c;
+}
